@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF00EBEA-1115-458E-BF89-B9B3C2DE470C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CatBody</RootNamespace>
+    <AssemblyName>CatBody</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CatBodyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatBodyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Data_Kucing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Data_Kucing.Designer.cs">
+      <DependentUpon>Form_Data_Kucing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Data_Pegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Data_Pegawai.Designer.cs">
+      <DependentUpon>Form_Data_Pegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Data_Pemilik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Data_Pemilik.Designer.cs">
+      <DependentUpon>Form_Data_Pemilik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Data_Rekam_Medis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Data_Rekam_Medis.Designer.cs">
+      <DependentUpon>Form_Data_Rekam_Medis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Data_Vaksin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Data_Vaksin.Designer.cs">
+      <DependentUpon>Form_Data_Vaksin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Menu_Utama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Menu_Utama.Designer.cs">
+      <DependentUpon>Form_Menu_Utama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Report.Designer.cs">
+      <DependentUpon>Form_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Splash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Splash_Screen.Designer.cs">
+      <DependentUpon>Form_Splash_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Kucing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Kucing.Designer.cs">
+      <DependentUpon>Form_Tambah_Data_Kucing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Pegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Pegawai.Designer.cs">
+      <DependentUpon>Form_Tambah_Data_Pegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Pemilik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Pemilik.Designer.cs">
+      <DependentUpon>Form_Tambah_Data_Pemilik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Rekam_Medis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Rekam_Medis.Designer.cs">
+      <DependentUpon>Form_Tambah_Data_Rekam_Medis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Vaksin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Tambah_Data_Vaksin.Designer.cs">
+      <DependentUpon>Form_Tambah_Data_Vaksin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Update_Data_Kucing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Update_Data_Kucing.Designer.cs">
+      <DependentUpon>Form_Update_Data_Kucing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Update_Data_Pegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Update_Data_Pegawai.Designer.cs">
+      <DependentUpon>Form_Update_Data_Pegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Update_Data_Pemilik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Update_Data_Pemilik.Designer.cs">
+      <DependentUpon>Form_Update_Data_Pemilik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Update_Data_Rekam_Medis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Update_Data_Rekam_Medis.Designer.cs">
+      <DependentUpon>Form_Update_Data_Rekam_Medis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Update_Data_Vaksin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Update_Data_Vaksin.Designer.cs">
+      <DependentUpon>Form_Update_Data_Vaksin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form_Data_Kucing.resx">
+      <DependentUpon>Form_Data_Kucing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Data_Pegawai.resx">
+      <DependentUpon>Form_Data_Pegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Data_Pemilik.resx">
+      <DependentUpon>Form_Data_Pemilik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Data_Rekam_Medis.resx">
+      <DependentUpon>Form_Data_Rekam_Medis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Data_Vaksin.resx">
+      <DependentUpon>Form_Data_Vaksin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Menu_Utama.resx">
+      <DependentUpon>Form_Menu_Utama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Report.resx">
+      <DependentUpon>Form_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Splash_Screen.resx">
+      <DependentUpon>Form_Splash_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tambah_Data_Kucing.resx">
+      <DependentUpon>Form_Tambah_Data_Kucing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tambah_Data_Pegawai.resx">
+      <DependentUpon>Form_Tambah_Data_Pegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tambah_Data_Pemilik.resx">
+      <DependentUpon>Form_Tambah_Data_Pemilik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tambah_Data_Rekam_Medis.resx">
+      <DependentUpon>Form_Tambah_Data_Rekam_Medis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Tambah_Data_Vaksin.resx">
+      <DependentUpon>Form_Tambah_Data_Vaksin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Update_Data_Kucing.resx">
+      <DependentUpon>Form_Update_Data_Kucing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Update_Data_Pegawai.resx">
+      <DependentUpon>Form_Update_Data_Pegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Update_Data_Pemilik.resx">
+      <DependentUpon>Form_Update_Data_Pemilik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Update_Data_Rekam_Medis.resx">
+      <DependentUpon>Form_Update_Data_Rekam_Medis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Update_Data_Vaksin.resx">
+      <DependentUpon>Form_Update_Data_Vaksin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="CatBodyDataSet.xsc">
+      <DependentUpon>CatBodyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CatBodyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CatBodyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CatBodyDataSet.xss">
+      <DependentUpon>CatBodyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical file brown.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
